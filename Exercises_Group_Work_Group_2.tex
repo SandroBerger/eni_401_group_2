@@ -10,6 +10,9 @@
 \usepackage[numbers]{natbib}
 \usepackage{float}
 \usepackage{gensymb}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{hyperref}
 
 \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
 
@@ -61,6 +64,21 @@ The so-called neutron stars have about the mass of our sun (ca. $2 \cdot 10^{30}
 
 \subsection{1.2 Coulomb interaction of two electrons}
 Sketch correctly to scale the course of the magnitude of the force with which two electrons repel each other at distances of $0,5 \cdot 10^{-10}$m to $5,0 \cdot 10^{-10}$m according to Coulomb's law.
+\begin{align}
+	[Q] &= As \\
+	e &= 1.6022 * 10^{-19} As \\
+	Q &= n * e \\
+	Q_{1} &= Q_{2} = e = 1.6022 * 10^{-19} As \\
+	\epsilon &= \epsilon_{0} * \epsilon_{r} \\
+	\epsilon_{0} &= 8.854 * 10^{-12} \frac{As}{Vm} \\
+	\epsilon_{r} &= 1 (\epsilon_{r} \text{ for vaccuum})\\
+	\vec{F_{Q1}} &= \frac{1}{4 * \pi * \epsilon } * \frac{Q_{1}*Q_{2}}{r^{2}} * \frac{\vec{r}_{12}}{|\vec{r}_{12}|} = -\vec{F_{Q2}}
+\end{align}
+See calculation of data points in appendix \hyperref[sec:data-table-a2]{3.1 Data table 1.2 (A2)}
+
+\begin{landscape}
+ \includepdf[pages={-},angle=90]{force_a2.pdf}
+\end{landscape}
 
 \newpage
 \section{2 Work and Power. Energy. Heat and Temperature}
@@ -121,5 +139,11 @@ P\ =\ 1000\ *\ 20.95\ /\ 1\ =\ 20950W\ =\ 20.95kW
 
 \end{array}
 $
+
+\newpage
+\section{3.0 Appendix}
+\subsection{3.1 Data table 1.2 (A2)}
+\label{sec:data-table-a2}
+\includepdf[pages=-]{a2_table.pdf}
 
 \end{document}
