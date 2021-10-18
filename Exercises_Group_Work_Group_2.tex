@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage[numbers]{natbib}
 \usepackage{float}
+\usepackage{gensymb}
 
 \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
 
@@ -97,5 +98,28 @@ In a crash test facility, a vehicle including cuts m = 900 kg is accelerated uni
 
 \section{2.3 Connected load of a flow heater}
 Suppose you want to design an electric water heater without a storage tank that heats a water flow of 0,1 l/s from 10 °C to 60 °C. What is the minimum required electrical connection power? (specific heat capacity of water c = 4,19 kJ/(kgK)).
+
+$
+\begin{array}{l}
+T_{in} = 10\degree C\\
+T_{out} = 60\degree C\\
+\Delta T=50^{\degree } C\ =\ 50K\\
+water\ flow\ =\ 0.1\ l/s\\
+m\ =\ 0.1 kg\\
+specific\ heat\ capacity\ of\ water\ c\ =\ 4.19kJ/( kgK)\\
+total\ energy\ to\ heat\ up\ 0.1 l\ water\ \Delta Q\ =\ c\ *\ m\ *\ \Delta T\\
+minimum\ required\ electrical\ connection\ power\ [ W] \ =\ kWh\\
+\\
+Required\ energy\ to\ heat\ up\ 0.1\ kg\ water\ from\ 10\degree C\ to\ 60\degree C\\
+\left[\Delta Q\right] \ =\ K\ *\ kg\ *\ \frac{kJ}{kg\ *\ K} \ =\ kJ\\
+\Delta Q\ =\ 50\ *\ 0.1\ *\ 4.19\ =\ 20.95\ kJ\\
+\\
+Required\ connection\ power\ to\ heat\ up\ 0.1l/s\ water\ from\ 10\degree C\ to\ 60\degree C\\
+\left[ P\right] \ =\ W\\
+P = 1000\ *\ kJ\ \ /\ t_{s} \ ( we\ need\ this\ energy\ every\ second\ to\ heat\ up\ the\ water\ constantly)\\
+P\ =\ 1000\ *\ 20.95\ /\ 1\ =\ 20950W\ =\ 20.95kW
+
+\end{array}
+$
 
 \end{document}
