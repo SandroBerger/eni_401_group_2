@@ -28,9 +28,7 @@
 \begin{figure}[htbp]
 \begin{minipage}[b]{0.50\linewidth}
 \begin{Large}
-	\textbf{Group Number:} 2\\
-	\\
-	
+	\textbf{Group Number:} 2\newline
 \end{Large}
 \end{minipage}
 \begin{minipage}[b]{0.50\linewidth}
@@ -86,19 +84,18 @@ See calculation of data points in appendix \hyperref[sec:data-table-a2]{3.1 Data
 For example, the electric drive of a train set consumes the power shown in the figure below during a operational cycle (1 MW = 106 W).
 
 \begin{enumerate}
-	\item What is the total electrical energy consumed during this operational cycle?\\\\
-	$
-	\begin{array}{l}
-		P_{1} \ =\ \frac{7MW\cdot \ 120s}{2} \ =\ 420\ MWs\ =\ 420\ MJ\\
-		P_{2} \ =\ 2\ MW\ *\ 600s\ =\ 1200\ MW\ =\ 1.2\ GJ\\
-		P_{3} \ =\ \frac{-7MW\ *\ 60s}{2} \ =\ -240\ MW\\
-		P_{total} \ =\ P_{1} \ +\ P_{2} \ +\ P_{3} \ =\ 420\ MJ\ +\ 1.2\ GJ\ -\ 240\ MJ\ =\ 1.38\ GJ
-		\end{array}
-	$
-	\item What is the mean power consumed?\\\\
-	$
-        P_{mean} \ =\ \frac{P_{total}}{\Delta t} = \frac{1.38\ GJ}{\Delta t_{1} +\Delta t_{2} +\Delta t_{3} +\Delta t_{4}} \ =\ \frac{1.38\ GWs}{120s\ +\ 600s\ +\ 60s\ +\ 60s} \ =\ 1.643\ MW
-    $
+	\item What is the total electrical energy consumed during this operational cycle?
+	\begin{align}
+		P_{1} &= \frac{7MW\cdot 120s}{2} = 420MWs = 420MJ\\
+		P_{2} &= 2 MW * 600s = 1200 MW = 1.2 GJ\\
+		P_{3} &= \frac{-7MW * 60s}{2} = -240 MW\\
+		P_{total} &= P_{1} + P_{2} + P_{3} = 420MJ + 1.2 GJ - 240 MJ &= 1.38 GJ
+	\end{align}
+	\item What is the mean power consumed?
+	\begin{align}
+        P_{mean} = \frac{P_{total}}{\Delta t} = \frac{1.38 GJ}{\Delta t_{1} +\Delta t_{2} +\Delta t_{3} +\Delta t_{4}}
+		= \frac{1.38GWs}{120s + 600s + 60s + 60s} = 1.643MW
+    \end{align}
 \end{enumerate}
 
 \begin{figure}[H]
@@ -115,31 +112,30 @@ In a crash test facility, a vehicle including cuts m = 900 kg is accelerated uni
 \end{enumerate}
 
 \section{2.3 Connected load of a flow heater}
-Suppose you want to design an electric water heater without a storage tank that heats a water flow of 0,1 l/s from 10 °C to 60 °C. What is the minimum required electrical connection power? (specific heat capacity of water c = 4,19 kJ/(kgK)).
-
-$
-\begin{array}{l}
-T_{in} = 10\degree C\\
-T_{out} = 60\degree C\\
-\Delta T=50^{\degree } C\ =\ 50K\\
-water\ flow\ =\ 0.1\ l/s\\
-m\ =\ 0.1 kg\\
-specific\ heat\ capacity\ of\ water\ c\ =\ 4.19kJ/( kgK)\\
-total\ energy\ to\ heat\ up\ 0.1 l\ water\ \Delta Q\ =\ c\ *\ m\ *\ \Delta T\\
-minimum\ required\ electrical\ connection\ power\ [ W] \ =\ kWh\\
-\\
-Required\ energy\ to\ heat\ up\ 0.1\ kg\ water\ from\ 10\degree C\ to\ 60\degree C\\
-\left[\Delta Q\right] \ =\ K\ *\ kg\ *\ \frac{kJ}{kg\ *\ K} \ =\ kJ\\
-\Delta Q\ =\ 50\ *\ 0.1\ *\ 4.19\ =\ 20.95\ kJ\\
-\\
-Required\ connection\ power\ to\ heat\ up\ 0.1l/s\ water\ from\ 10\degree C\ to\ 60\degree C\\
-\left[ P\right] \ =\ W\\
-P = \frac{E}{t_{s}} \ ( t_{s} \ -> \ time \ period \ in \ seconds \ -> \ in \ this \ case \ one \ second \ because \ of \ heating \\ 
-up \ the \ specific \ amount \ of \ water \ every \ second)\\
-P\ =\ 20950\ /\ 1\ =\ 20950W\ =\ 20.95kW
-
-\end{array}
-$
+Suppose you want to design an electric water heater without a storage tank that heats a water flow of 0,1 l/s from 10 °C to 60 °C. 
+What is the minimum required electrical connection power? (specific heat capacity of water c = 4,19 kJ/(kgK)).
+\newline
+\begin{flalign*}
+	&T_{in} = 10\degree C&\\
+	&T_{out} = 60\degree C&\\
+	&\Delta T = 50^{\degree}C = 50K&\\
+	&\text{water flow} = 0.1l/s&\\
+	&m = 0.1kg&\\
+	&\text{specific heat capacity of water c} = 4.19kJ/(kgK)&\\
+	&\text{total energy to heat up 0.1l water } \Delta Q = c \cdot m \cdot \Delta T&\\
+	&\text{minimum required electrical connection power } [W] = kWh&
+\end{flalign*}
+Required energy to heat up 0.1 kg water from $10\degree$C to $60\degree$C
+\begin{align*}
+	\left[\Delta Q\right] = K \cdot kg \cdot \frac{kJ}{kg \cdot K} = kJ\\
+	\Delta Q = 50 \cdot 0.1 \cdot 4.19 = 20.95kJ
+\end{align*}
+Required connection power to heat up 0.1l/s water from $10\degree$C to $60\degree$C\newline
+$\left[P\right] = W$\newline
+$P = \frac{E}{t_{s}}$ ($t_{s}$ $\rightarrow$ time period in seconds $\rightarrow$ in this case one second because of heating up the specific amount of water every second)
+\begin{align*}
+	P = \frac{20950}{1} = 20950W = 20.95kW
+\end{align*}
 
 \newpage
 \section{3.0 Appendix}
