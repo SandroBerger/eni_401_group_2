@@ -113,17 +113,17 @@ For example, the electric drive of a train set consumes the power shown in the f
 
 \begin{enumerate}
 	\item What is the total electrical energy consumed during this operational cycle?
-	\begin{align}
+	\begin{align*}
 		P_{1} &= \frac{7MW\cdot 120s}{2} = 420MWs = 420MJ\\
 		P_{2} &= 2 MW * 600s = 1200 MW = 1.2 GJ\\
 		P_{3} &= \frac{-7MW * 60s}{2} = -240 MW\\
 		P_{total} &= P_{1} + P_{2} + P_{3} = 420MJ + 1.2 GJ - 240 MJ = 1.38 GJ
-	\end{align}
+	\end{align*}
 	\item What is the mean power consumed?
-	\begin{align}
+	\begin{align*}
         P_{mean} = \frac{P_{total}}{\Delta t} = \frac{1.38 GJ}{\Delta t_{1} +\Delta t_{2} +\Delta t_{3} +\Delta t_{4}}
 		= \frac{1.38GWs}{120s + 600s + 60s + 60s} = 1.643MW
-    \end{align}
+  \end{align*}
 \end{enumerate}
 
 \begin{figure}[H]
@@ -134,35 +134,60 @@ For example, the electric drive of a train set consumes the power shown in the f
 \section{B2 crash test facility}
 In a crash test facility, a vehicle including cuts m = 900 kg is accelerated uniformly via an electric linear motor through a distance s = 20 m with a constant force F = 5 kN.
 \begin{enumerate}
-	\item How big is the necessary electrical energy in kWh if all losses are neglected?
-	\item How big is the final speed achieved? During the subsequent impact process, the vehicle is brought to a standstill within a distance of s = 80 cm.
-	\item What is the mean force that acts on a fictitious seated occupant, m1 = 80 kg?
+	\item[1] How big is the necessary electrical energy in kWh if all losses are neglected?
+	\item[2] How big is the final speed achieved?
+	\item[3] During the subsequent impact process, the vehicle is brought to a standstill within a distance of s = 80 cm. What is the mean force that acts on a fictitious seated occupant, m1 = 80 kg?
 \end{enumerate}
-
+1. 
+	\begin{align*}
+			m &= 900 kg \\
+			s &= 20 m \\
+			F &= 5000N \\
+			F &= m * a \rightarrow a = \frac{F}{m} \\
+			a &= \frac{F}{m} = \frac{5000N}{900kg} = 5.556 \frac{m}{s^{2}} \\
+			s &= 0.5 * a * t^{2} \rightarrow t = \sqrt{\frac{s}{0.5 * a}} \\
+			t &= \sqrt{\frac{s}{0.5*a}} = \sqrt{\frac{20m}{0.5 * 5.556 \frac{m}{s^{2}}}} = 2.68s \\
+			P &= \frac{F * s}{t} = \frac{5000m * 20 m}{2.68s} = 37 313.4328358209 W \\
+			Energy &= P * t = 37 313.4328358209 W * 2.68s = 100000Ws = 0.0278kWh \\
+			\intertext{or}
+			W &= F * d = 5000N * 20m = 100000 = \frac{100000}{3.6 * 10^6} = 0,028 kWh
+	\end{align*}
+2.
+	\begin{align*}
+		v &= a * t = 5.556 \frac{m}{s^{2}} * 2.68s = 14.889 \frac{m}{s} \widehat{=} 53,6 kmh \\		
+	\end{align*}
+3.
+	\begin{align*}
+		m &= 900 kg \\
+		s &= 0.8 m \\
+		v &= 14.889 \frac{m}{s} \\
+		a &= - \frac{v^{2}}{2*s} = - \frac{(14.889 \frac{m}{s})^{2}}{2*0.8m} = -138.55 \frac{m}{s^{2}} \\
+		F &= m * a = 80 kg * 138.55 \frac{m}{s^{2}} = 11084 N
+	\end{align*}
 \section{B3 Connected load of a flow heater}
 Suppose you want to design an electric water heater without a storage tank that heats a water flow of 0,1 l/s from 10 °C to 60 °C. 
 What is the minimum required electrical connection power? (specific heat capacity of water c = 4,19 kJ/(kgK)).
 \newline
-\begin{flalign*}
-	&T_{in} = 10\degree C&\\
-	&T_{out} = 60\degree C&\\
-	&\Delta T = 50^{\degree}C = 50K&\\
-	&\text{water flow} = 0.1l/s&\\
-	&m = 0.1kg&\\
-	&\text{specific heat capacity of water c} = 4.19kJ/(kgK)&\\
-	&\text{total energy to heat up 0.1l water } \Delta Q = c \cdot m \cdot \Delta T&\\
-	&\text{minimum required electrical connection power } [W] = kWh&
-\end{flalign*}
-Required energy to heat up 0.1 kg water from $10\degree$C to $60\degree$C
 \begin{align*}
-	\left[\Delta Q\right] = K \cdot kg \cdot \frac{kJ}{kg \cdot K} = kJ\\
-	\Delta Q = 50 \cdot 0.1 \cdot 4.19 = 20.95kJ
-\end{align*}
-Required connection power to heat up 0.1l/s water from $10\degree$C to $60\degree$C\newline
-$\left[P\right] = W$\newline
-$P = \frac{E}{t_{s}}$ ($t_{s}$ $\rightarrow$ time period in seconds $\rightarrow$ in this case one second because of heating up the specific amount of water every second)
-\begin{align*}
-	P = \frac{20950}{1} = 20950W = 20.95kW
+	T_{in} &= 10\degree C \\
+	T_{out} &= 60\degree C \\
+	\Delta T &= 50^{\degree}C = 50K \\
+	\text{water flow} &= 0.1\frac{l}{s} \\
+	m &= 0.1kg \\
+	\intertext{specific heat capacity of water c} 
+	c &= 4.19kJ/(kgK) \\
+	\intertext{total energy to heat up 0.1l water}
+	\Delta Q &= c \cdot m \cdot \Delta T \\
+	\intertext{minimum required electrical connection power} 
+	[W] &= kWh \\
+	\intertext{Required energy to heat up 0.1 kg water from $10\degree$C to $60\degree$C}
+	\left[\Delta Q\right] &= K \cdot kg \cdot \frac{kJ}{kg \cdot K} = kJ \\
+	\Delta Q &= 50 \cdot 0.1 \cdot 4.19 = 20.95kJ \\
+	\intertext{Required connection power to heat up 0.1l/s water from $10\degree$C to $60\degree$C}
+	\left[P\right] &= W \\
+	P &= \frac{E}{t_{s}} \\
+	\intertext{($t_{s}\rightarrow$ time period in seconds $\rightarrow$ in this case one second because of heating up the specific amount of water every second)}
+	P &= \frac{20950}{1} = 20950W = 20.95kW
 \end{align*}
 
 \newpage
